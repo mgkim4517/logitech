@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/*** 폰트 설정 ***/
+/* 'Pretendard', sans-serif */
+@import url(./pretendard-subset.css);
+
+/* 'S-CoreDream', sans-serif */
+@import url(./S-CoreDream.css);
+
+/*** 변수 설정 ***/
+:root {
+  /* fonts */
+  --main-font: 'Pretendard', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  --sub-font: 'S-CoreDream', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+
+/*** font-size ***/
+/* web font size */
+--web-font-xxl: 36px;
+--web-font-xl: 32px;
+--web-font-lg: 24px;
+--web-font-md: 20px;
+--web-font-sm: 18px;
+--web-font-xs: 16px;
+--web-font-xxs: 14px;
+
+/* mobile font size */
+--mobile-font-xxl: 24px;
+--mobile-font-xl: 20px;
+--mobile-font-lg: 16px;
+--mobile-font-md: 14px;
+--mobile-font-sm: 12px;
+--mobile-font-xs: 10px;
+
+/* color */
+--bg-body-color: #D1D1D1;
+--bg-gray-color: #EBEBEB;
+--bg-darkgray-color: #464646;
+--bg-white-color: #fff;
+
+--900-black: #000;
+--800-black: #222;
+--700-black: #272727;
+--600-black: #333;
+
+--900-gray: #666;
+--800-gray: #808080;
+--700-gray: #EBEBEB;
+}

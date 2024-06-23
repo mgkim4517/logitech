@@ -1,3 +1,11 @@
+## 20240623
+* mobile 디자인 완성
+* 마크업 작업
+* 퍼블리싱 가이드 작성
+* index.html 작업
+* common.css 작업
+* index.css 작업
+
 ## 20240622
 * pc 디자인 완성
 * mobile 디자인 시작
