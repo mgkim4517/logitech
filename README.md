@@ -1,3 +1,10 @@
+## 240625
+* index-pc.css 완성
+* index-t.css 완성
+* index.js 완성
+* logitech-container의 .slide-wrapper의 이미지가 무한으로 흐르도록 하는 애니메이션 효과 구현
+* about-container의 .about-menu의 li를 클릭할 경우 .about-logitech-box의 같은 인덱스 번호의 li에 active 클래스가 붙도록 하는 이벤트 구현
+
 ## 240624
 * index.css 완성
 * index-pc.css 작업

@@ -23,12 +23,17 @@
 
   /*** logitech-container ***/
   main .logitech-container {
-    padding: 35px 32px;
+    padding: 35px 0;
     height: calc(100vh - 45px);
   }
 
+  main .logitech-container h2 {
+    padding-left: 32px;
+  }
+
   main .logitech-container .logitech-info {
-    padding-top: 150px;
+    padding: 150px 32px 0;
+    /* padding-top: 150px; */
   }
 
   main .logitech-container .logitech-info li {
@@ -37,7 +42,7 @@
   }
 
   main .logitech-container .logitech-text-box {
-    padding-top: 30px;
+    padding-top: 0px;
   }
 
   main .logitech-container .logitech-text-box p {
@@ -45,7 +50,7 @@
     padding-bottom: 20px;
   }
 
-  main .logitech-container .slide-wrapper .slide-box .slide-img {
+  main .logitech-container .slide-wrapper .slide-box ul .slide-img {
     width: 500px;
   }
 
@@ -185,7 +190,7 @@
   main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content,
   main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content {
     position: absolute;
-    bottom: 100px;
+    bottom: 180px;
     width: 50%;
     padding: 0 32px 0 0;
     gap: 250px;
@@ -206,6 +211,14 @@
   main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box p,
   main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content .carbon-box p {
     font-size: var(--web-font-xs);
+  }
+
+  main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content .plastic-box a,
+  main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content .fabric-box a,
+  main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box a,
+  main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box a,
+  main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content .carbon-box a {
+    padding: 10px 18px;
   }
 
   main .sustainablity-desc .plastic-container img,
@@ -304,8 +317,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    column-gap: 100px;
-    padding: 32px 27px;
+    padding: 32px 0 32px 47px;
   }
 
   footer .news-container .sns-box {
@@ -313,7 +325,7 @@
   }
 
   footer .news-container .email-box {
-    justify-self: flex-start;
+    justify-self: center;
     align-self: flex-end;
   }
 
@@ -338,9 +350,11 @@
   footer .news-container .email-check {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    justify-self: flex-start;
+    justify-self: center;
     align-self: flex-start;
+    align-items: center;
     padding-top: 20px;
+    width: 370px;
   }
 
   footer .news-container .email-check p {
@@ -355,7 +369,7 @@
   }
 
   footer .footer-text {
-    padding: 34px 0 34px 27px;
+    padding: 34px 0 34px 47px;
   }
 
   footer .footer-text h2 img {

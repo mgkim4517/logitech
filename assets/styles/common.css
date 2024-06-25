@@ -26,13 +26,13 @@
 /* mobile font size */
 --mobile-font-xxl: 24px;
 --mobile-font-xl: 20px;
---mobile-font-lg: 16px;
---mobile-font-md: 14px;
---mobile-font-sm: 12px;
---mobile-font-xs: 10px;
+--mobile-font-lg: 18px;
+--mobile-font-md: 16px;
+--mobile-font-sm: 14px;
+--mobile-font-xs: 12px;
 
 /* color */
---bg-body-color: #D1D1D1;
+--bg-body-color: #D2D2D2;
 --bg-gray-color: #EBEBEB;
 --bg-darkgray-color: #464646;
 --bg-white-color: #fff;

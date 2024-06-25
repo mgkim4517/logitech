@@ -44,17 +44,17 @@ main {
 main .logitech-container {
   background-color: var(--bg-white-color);
   border-radius: 20px;
-  padding: 24px;
+  padding: 24px 0;
   height: 100%;
-  overflow: hidden;
 }
 
 main .logitech-container h2 {
   width: 158px;
+  padding: 0 24px;
 }
 
 main .logitech-container .logitech-info {
-  padding-top: 175px;
+  padding: 175px 24px 0;
 }
 
 main .logitech-container .logitech-info li {
@@ -68,25 +68,20 @@ main .logitech-container .logitech-info li:first-child {
   color: #4682B4;
 }
 
-main .logitech-container .slide-box {
-  display: flex;
-  gap: 20px;
-  width: 900%;
-}
-
 main .logitech-container .logitech-text-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 0 21px;
+  padding: 25px 24px 21px 0;
 }
 
 main .logitech-container .logitech-text-box svg {
-  width: 40px;
+  width: 50px;
+  padding-left: 24px;
 }
 
 main .logitech-container .logitech-text-box svg line {
-  stroke-width: 40;
+  stroke-width: 100;
 }
 
 main .logitech-container .logitech-text-box p {
@@ -94,13 +89,62 @@ main .logitech-container .logitech-text-box p {
   font-weight: 600;
 }
 
-main .logitech-container .slide-wrapper .slide-box .slide-img {
-  width: 340px;
+main .logitech-container .slide-wrapper {
+  display: flex;
+  overflow: hidden;
 }
 
-main .logitech-container .slide-wrapper .slide-box .slide-img img {
+main .logitech-container .slide-wrapper .slide-box ul {
+  display: flex;
+}
+
+main .logitech-container .slide-wrapper .slide-box ul .slide-img {
+  width: 340px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+main .logitech-container .slide-wrapper .slide-box ul .slide-img img {
   width: 100%;
   border-radius: 15px;
+}
+
+.slide-box.original {
+  animation: rollingleft1 90s linear infinite;
+}
+
+.slide-box.clone {
+  animation: rollingleft2 90s linear infinite;
+}
+
+@keyframes rollingleft1 {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  50.01% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rollingleft2 {
+  0% {
+    transition: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
 }
 
 /*** about container ***/
@@ -263,6 +307,7 @@ main .sustainability-container .sustainability-box li h3 {
   padding-top: 18px;
 }
 
+/*** sustainablity-des ***/
 /* plastic-container, fabric-container, aluminium-container, all-in-one-container, carbon-container */
 main .sustainablity-desc .plastic-container,
 main .sustainablity-desc .fabric-container,
@@ -321,7 +366,7 @@ main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content .fabr
 main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box p,
 main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box p,
 main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content .carbon-box p {
-  font-size: var(--mobile-font-md);
+  font-size: var(--mobile-font-sm);
   font-weight: 400;
   color: var(--900-black);
   line-height: 1.4;
@@ -467,13 +512,14 @@ footer .sub-gnb .info-gnb li:first-child {
 
 footer .sub-gnb .info-gnb li {
   color: var(--bg-white-color);
-  font-size: var(--mobile-font-md);
+  font-size: var(--mobile-font-sm);
   font-weight: 400;
   padding-top: 20px;
 }
 
 footer .sub-gnb .value-gnb {
   justify-self: flex-end;
+  padding-right: 24px;
 }
 
 footer .sub-gnb .value-gnb li:first-child {
@@ -483,7 +529,7 @@ footer .sub-gnb .value-gnb li:first-child {
 
 footer .sub-gnb .value-gnb li {
   color: var(--bg-white-color);
-  font-size: var(--mobile-font-md);
+  font-size: var(--mobile-font-sm);
   font-weight: 400;
   padding-top: 20px;
 }
@@ -491,6 +537,7 @@ footer .sub-gnb .value-gnb li {
 footer .sub-gnb .customer-gnb {
   justify-self: flex-end;
   align-self: flex-end;
+  padding-right: 24px;
 }
 
 footer .sub-gnb .customer-gnb li:first-child {
@@ -499,7 +546,7 @@ footer .sub-gnb .customer-gnb li:first-child {
 
 footer .sub-gnb .customer-gnb li {
   color: var(--bg-white-color);
-  font-size: var(--mobile-font-md);
+  font-size: var(--mobile-font-sm);
   font-weight: 400;
   padding-bottom: 20px;
 }
