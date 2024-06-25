@@ -1,6 +1,6 @@
 @charset "utf-8";
 /***** pc ver *****/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
 
   /***** header *****/
   header {
@@ -41,12 +41,20 @@
   }
 
   main .logitech-container .logitech-text-box p {
-    font-size: var(--web-font-lg);
+    font-size: var(--web-font-md);
     padding-bottom: 20px;
   }
 
-  main .logitech-container .slide-box li {
+  main .logitech-container .slide-wrapper .slide-box .slide-img {
     width: 500px;
+  }
+
+  main .logitech-container .logitech-text-box svg {
+    width: 500px;
+  }
+
+  main .logitech-container .logitech-text-box svg line {
+    stroke-width: 40;
   }
 
   /*** about-container ***/
@@ -86,17 +94,17 @@
     font-size: var(--web-font-xs);
   }
 
-  main .about-container .about-wrapper .about-content {
+  main .about-container .about-wrapper .about-logitech-box {
     width: 70%;
     min-width: calc(100% - 250px);
   }
 
-  main .about-container .about-wrapper .about-content li h2 {
+  main .about-container .about-wrapper .about-logitech-box li h2 {
     font-size: var(--web-font-lg);
     padding: 70px 0 50px 20px;
   }
 
-  main .about-container .about-wrapper .about-content li p {
+  main .about-container .about-wrapper .about-logitech-box li p {
     font-size: var(--web-font-xs);
     padding: 0 20px 32px 20px;
   }
@@ -136,40 +144,46 @@
     padding-top: 22px;
   }
 
-  /*** plastic-container, fabric-container, aluminium-container, all-in-one-container, carbon-container ***/
-  main .plastic-container,
-  main .fabric-container,
-  main .aluminium-container,
-  main .all-in-one-container,
-  main .carbon-container {
+  /*** sustainablity-desc ***/
+  main .sustainablity-desc {
+    height: 500vh;
+  }
+
+  /* plastic-container, fabric-container, aluminium-container, all-in-one-container, carbon-container */
+  main .sustainablity-desc .plastic-container,
+  main .sustainablity-desc .fabric-container,
+  main .sustainablity-desc .aluminium-container,
+  main .sustainablity-desc .all-in-one-container,
+  main .sustainablity-desc .carbon-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
-    position: relative;
+    position: sticky;
+    top: 0;
   }
 
-  main .plastic-container .plastic-wrapper,
-  main .fabric-container .fabric-wrapper,
-  main .aluminium-container .aluminium-wrapper,
-  main .all-in-one-container .all-in-one-wrapper,
-  main .carbon-container .carbon-wrapper {
+  main .sustainablity-desc .plastic-container .plastic-wrapper,
+  main .sustainablity-desc .fabric-container .fabric-wrapper,
+  main .sustainablity-desc .aluminium-container .aluminium-wrapper,
+  main .sustainablity-desc .all-in-one-container .all-in-one-wrapper,
+  main .sustainablity-desc .carbon-container .carbon-wrapper {
     grid-column: 1 / 2;
   }
 
-  main .plastic-container .plastic-wrapper h2,
-  main .fabric-container .fabric-wrapper h2,
-  main .aluminium-container .aluminium-wrapper h2,
-  main .all-in-one-container .all-in-one-wrapper h2,
-  main .carbon-container .carbon-wrapper h2 {
+  main .sustainablity-desc .plastic-container .plastic-wrapper h2,
+  main .sustainablity-desc .fabric-container .fabric-wrapper h2,
+  main .sustainablity-desc .aluminium-container .aluminium-wrapper h2,
+  main .sustainablity-desc .all-in-one-container .all-in-one-wrapper h2,
+  main .sustainablity-desc .carbon-container .carbon-wrapper h2 {
     font-size: var(--web-font-xl);
     padding: 70px 0 0 32px;
   }
 
-  main .plastic-container .plastic-wrapper .plastic-content,
-  main .fabric-container .fabric-wrapper .fabric-content,
-  main .aluminium-container .aluminium-wrapper .aluminium-content,
-  main .all-in-one-container .all-in-one-wrapper .all-in-one-content,
-  main .carbon-container .carbon-wrapper .carbon-content {
+  main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content,
+  main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content,
+  main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content,
+  main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content,
+  main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content {
     position: absolute;
     bottom: 100px;
     width: 50%;
@@ -177,28 +191,28 @@
     gap: 250px;
   }
 
-  main .plastic-container .plastic-wrapper .plastic-content h3,
-  main .fabric-container .fabric-wrapper .fabric-content h3,
-  main .aluminium-container .aluminium-wrapper .aluminium-content h3,
-  main .all-in-one-container .all-in-one-wrapper .all-in-one-content h3,
-  main .carbon-container .carbon-wrapper .carbon-content h3 {
+  main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content h3,
+  main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content h3,
+  main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content h3,
+  main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content h3,
+  main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content h3 {
     font-size: 64px;
     padding-left: 32px;
   }
 
-  main .plastic-container .plastic-wrapper .plastic-content .plastic-box p,
-main .fabric-container .fabric-wrapper .fabric-content .fabric-box p,
-main .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box p,
-main .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box p,
-main .carbon-container .carbon-wrapper .carbon-content .carbon-box p {
-  font-size: var(--web-font-xs);
-}
+  main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content .plastic-box p,
+  main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content .fabric-box p,
+  main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box p,
+  main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box p,
+  main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content .carbon-box p {
+    font-size: var(--web-font-xs);
+  }
 
-  main .plastic-container img,
-  main .fabric-container img,
-  main .aluminium-container img,
-  main .all-in-one-container img,
-  main .carbon-container img {
+  main .sustainablity-desc .plastic-container img,
+  main .sustainablity-desc .fabric-container img,
+  main .sustainablity-desc .aluminium-container img,
+  main .sustainablity-desc .all-in-one-container img,
+  main .sustainablity-desc .carbon-container img {
     grid-column: 2 / 3;
     width: 100%;
     height: 100%;
@@ -233,59 +247,133 @@ main .carbon-container .carbon-wrapper .carbon-content .carbon-box p {
   }
 
   main .partner-container .partner-wrapper .microsoft-content h3,
-main .partner-container .partner-wrapper .google-content h3,
-main .partner-container .partner-wrapper .zoom-content h3 {
-  font-size: var(--web-font-md);
-  width: 160px;
-  height: 40px;
-  line-height: 40px;
-}
+  main .partner-container .partner-wrapper .google-content h3,
+  main .partner-container .partner-wrapper .zoom-content h3 {
+    font-size: var(--web-font-md);
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+  }
 
-main .partner-container .partner-wrapper .microsoft-content p,
-main .partner-container .partner-wrapper .google-content p,
-main .partner-container .partner-wrapper .zoom-content p {
-  font-size: var(--web-font-xs);
-}
+  main .partner-container .partner-wrapper .microsoft-content p,
+  main .partner-container .partner-wrapper .google-content p,
+  main .partner-container .partner-wrapper .zoom-content p {
+    font-size: var(--web-font-xs);
+  }
 
-/***** footer *****/
-footer {
-  padding: 0 32px;
-}
+  /***** footer *****/
+  footer {
+    padding: 0 32px;
+  }
 
-footer .sub-gnb {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  padding: 60px 0;
-  width: 780px;
-  border: none;
-}
+  footer .sub-gnb {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 60px 27px;
+    width: 780px;
+    border: none;
+  }
 
-footer .sub-gnb .info-gnb {
-  padding-left: 20px;
-}
+  footer .sub-gnb .info-gnb {
+    padding-left: 20px;
+  }
 
-footer .sub-gnb .info-gnb li,
-footer .sub-gnb .value-gnb li {
-  font-size: var(--web-font-xs);
-  padding-top: 22px;
-}
+  footer .sub-gnb .info-gnb li,
+  footer .sub-gnb .value-gnb li {
+    font-size: var(--web-font-xs);
+    padding-top: 22px;
+  }
 
-footer .sub-gnb .value-gnb {
-  justify-self: flex-start;
-  padding-left: 20px;
-}
+  footer .sub-gnb .value-gnb {
+    justify-self: flex-start;
+    padding-left: 20px;
+  }
 
-footer .sub-gnb .customer-gnb {
-  justify-self: flex-start;
-  align-self: flex-start;
-  padding-left: 20px;
-}
+  footer .sub-gnb .customer-gnb {
+    justify-self: flex-start;
+    align-self: flex-start;
+    padding-left: 20px;
+  }
 
-footer .sub-gnb .customer-gnb li {
-  font-size: var(--web-font-xs);
-}
+  footer .sub-gnb .customer-gnb li {
+    font-size: var(--web-font-xs);
+  }
 
-footer .news-container {
-  border-top: 2px solid #777;
-}
+  footer .news-container {
+    border-top: 2px solid #777;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 100px;
+    padding: 32px 27px;
+  }
+
+  footer .news-container .sns-box {
+    justify-self: flex-start;
+  }
+
+  footer .news-container .email-box {
+    justify-self: flex-start;
+    align-self: flex-end;
+  }
+
+  footer .news-container .email-box label {
+    width: 320px;
+  }
+
+  footer .news-container .email-box label input {
+    width: 320px;
+    height: 50px;
+  }
+
+  footer .news-container .email-box button {
+    width: 50px;
+    height: 50px;
+  }
+
+  footer .news-container .email-box button img {
+    width: 15px;
+  }
+
+  footer .news-container .email-check {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: flex-start;
+    align-self: flex-start;
+    padding-top: 20px;
+  }
+
+  footer .news-container .email-check p {
+    font-size: var(--web-font-xxs);
+  }
+
+  footer .news-container .clause {
+    justify-self: flex-start;
+    align-self: center;
+    padding: 0;
+    font-size: var(--web-font-xxs);
+  }
+
+  footer .footer-text {
+    padding: 34px 0 34px 27px;
+  }
+
+  footer .footer-text h2 img {
+    width: 86px;
+    padding-bottom: 38px;
+  }
+
+  footer .footer-text p {
+    font-size: var(--web-font-xxs);
+  }
+
+  footer .footer-text address {
+    font-size: var(--web-font-xxs);
+  }
+
+  footer .footer-text .github {
+    font-size: var(--web-font-xs);
+    bottom: 20px;
+    right: 10px;
+  }
 }

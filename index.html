@@ -17,10 +17,12 @@
   <link rel="stylesheet" href="./assets/styles/common.css">
   <!-- 이 페이지만의 style -->
   <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index-t.css">
   <link rel="stylesheet" href="./index-pc.css">
   <!-- jq -->
-
+  <script defer src="./index.js"></script>
   <!-- plugIn js -->
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -36,7 +38,7 @@
 
   <main>
     <section class="logitech-container">
-      <h2><img src="./images/logo-logitech.svg" alt=""></h2>
+      <h2><img src="./images/logo-logitech.svg" alt="로지텍 검은색 로고"></h2>
       <ul class="logitech-info">
         <li>NEW</li>
         <li>INSPIRATION</li>
@@ -44,20 +46,24 @@
         <li>INNOVATION</li>
       </ul>
       <div class="logitech-text-box">
-        <img src="" alt="">
+        <svg width="624" height="4" viewBox="0 0 624 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="2" x2="624" y2="2" stroke="#4682B4" stroke-width="4" />
+        </svg>
         <p>LOGITECH company for peripherals</p>
       </div>
-      <ul class="slide-box">
-        <li><img src="./images/product-img1.png" alt=""></li>
-        <li><img src="./images/product-img2.png" alt=""></li>
-        <li><img src="./images/product-img3.png" alt=""></li>
-        <li><img src="./images/product-img4.png" alt=""></li>
-        <li><img src="./images/product-img5.png" alt=""></li>
-        <li><img src="./images/product-img6.png" alt=""></li>
-        <li><img src="./images/product-img7.png" alt=""></li>
-        <li><img src="./images/product-img8.png" alt=""></li>
-        <li><img src="./images/product-img9.png" alt=""></li>
-      </ul>
+      <div class="slide-wrapper">
+        <ul class="slide-box">
+          <li class="slide-img"><img src="./images/product-img1.png" alt=""></li>
+          <li class="slide-img"><img src="./images/product-img2.png" alt=""></li>
+          <li class="slide-img"><img src="./images/product-img3.png" alt=""></li>
+          <li class="slide-img"><img src="./images/product-img4.png" alt=""></li>
+          <li class="slide-img"><img src="./images/product-img5.png" alt=""></li>
+          <li class="slide-img"><img src="./images/product-img6.png" alt=""></li>
+          <li class="slide-img"><img src="./images/product-img7.png" alt=""></li>
+          <li class="slide-img"><img src="./images/product-img8.png" alt=""></li>
+          <li class="slide-img"><img src="./images/product-img9.png" alt=""></li>
+        </ul>
+      </div>
     </section>
 
     <section class="about-container">
@@ -68,13 +74,13 @@
         <a href="#">more</a>
         <div class="about-wrapper">
           <ul class="about-menu">
-            <li class="on">1. logitech</li>
+            <li class="active">1. logitech</li>
             <li>2. logicares</li>
             <li>3. design</li>
             <li>4. creating an inclusive culture</li>
           </ul>
-          <ul class="about-content about-logitech">
-            <li class="on">
+          <ul class="about-logitech-box">
+            <li class="about-content about-logitech active">
               <h2>LOGITECH</h2>
               <p>1981년 스위스 로잔에서 창립하여 실리콘 밸리로 빠르게 확장한 로지텍은 적외선 무선 마우스, 엄지 손가락으로 작동하는 트랙볼, 레이저 마우스 등 혁신적인 컴퓨터 주변 기기와 다양한
                 업계 최초 제품을 통해 사람들을 연결하기 시작했습니다.</p>
@@ -134,81 +140,83 @@
       </ul>
     </section>
 
-    <section class="plastic-container">
-      <div class="plastic-wrapper">
-        <h2>플라스틱의 새로운 활용</h2>
-        <div class="plastic-content">
-          <h3>01</h3>
-          <div class="plastic-box">
-            <p>로지텍은 전자제품이 쓰레기 매립지에 던져질 가능성을 줄이기 위해 재활용 플라스틱과 저탄소 자재를 사용합니다. 이는 새로운 플라스틱 사용을 줄이고 자원 순환을 촉진합니다.</p>
-            <a href="#">more</a>
+    <section class="sustainablity-desc">
+      <article class="plastic-container">
+        <div class="plastic-wrapper">
+          <h2>플라스틱의 새로운 활용</h2>
+          <div class="plastic-content">
+            <h3>01</h3>
+            <div class="plastic-box">
+              <p>로지텍은 전자제품이 쓰레기 매립지에 던져질 가능성을 줄이기 위해 재활용 플라스틱과 저탄소 자재를 사용합니다. 이는 새로운 플라스틱 사용을 줄이고 자원 순환을 촉진합니다.</p>
+              <a href="#">more</a>
+            </div>
           </div>
         </div>
-      </div>
-      <img src="./images/plastic.png" alt="플라스틱 이미지">
-    </section>
-
-    <section class="fabric-container">
-      <div class="fabric-wrapper">
-        <h2>재활용 패브릭</h2>
-        <div class="fabric-content">
-          <h3>02</h3>
-          <div class="fabric-box">
-            <p>로지텍은 가능한 경우 버진 폴리에스터 대신 재활용 플라스틱 재료로 만든 패브릭을 사용합니다. 이는 플라스틱 물병과 같은 폐자제에 또 한 번의 쓸모를 제공합니다. 폐기물과 탄소 영향을 줄이는
-              데
-              도움이 됩니다.</p>
-            <a href="#">more</a>
+        <img src="./images/plastic.png" alt="플라스틱 이미지">
+      </article>
+  
+      <article class="fabric-container">
+        <div class="fabric-wrapper">
+          <h2>재활용 패브릭</h2>
+          <div class="fabric-content">
+            <h3>02</h3>
+            <div class="fabric-box">
+              <p>로지텍은 가능한 경우 버진 폴리에스터 대신 재활용 플라스틱 재료로 만든 패브릭을 사용합니다. 이는 플라스틱 물병과 같은 폐자제에 또 한 번의 쓸모를 제공합니다. 폐기물과 탄소 영향을 줄이는
+                데
+                도움이 됩니다.</p>
+              <a href="#">more</a>
+            </div>
           </div>
         </div>
-      </div>
-      <img src="./images/fabric.png" alt="패브릭 이미지">
-    </section>
-
-
-    <section class="aluminium-container">
-      <div class="aluminium-wrapper">
-        <h2>저탄소 알루미늄</h2>
-        <div class="aluminium-content">
-          <h3>03</h3>
-          <div class="aluminium-box">
-            <p>수력 발전과 같은 재생 에너지로 생산되는 저탄소 알루미늄을 선택합니다. 이를 통해 화석 연료 에너지를 사용하여 생산되는 기존 알루미늄에 비해 탄소 발자국이 최대 80% 절감됩니다.</p>
-            <a href="#">more</a>
+        <img src="./images/fabric.png" alt="패브릭 이미지">
+      </article>
+  
+  
+      <article class="aluminium-container">
+        <div class="aluminium-wrapper">
+          <h2>저탄소 알루미늄</h2>
+          <div class="aluminium-content">
+            <h3>03</h3>
+            <div class="aluminium-box">
+              <p>수력 발전과 같은 재생 에너지로 생산되는 저탄소 알루미늄을 선택합니다. 이를 통해 화석 연료 에너지를 사용하여 생산되는 기존 알루미늄에 비해 탄소 발자국이 최대 80% 절감됩니다.</p>
+              <a href="#">more</a>
+            </div>
           </div>
         </div>
-      </div>
-      <img src="./images/aluminium.png" alt="알루미늄 이미지">
-    </section>
-
-    <section class="all-in-one-container">
-      <div class="all-in-one-wrapper">
-        <h2>줄어든 부품을 올인원에</h2>
-        <div class="all-in-one-content">
-          <h3>04</h3>
-          <div class="all-in-one-box">
-            <p>로지텍의 화상 회의실 솔루션은 외부 컴퓨팅 또는 추가 스피커 및 마이크가 필요한 회의실 시스템과 비교할 때, 특히 올인원 비디오 바를 비롯하여 더 적은 장치와 전력을 소모할 수 있습니다.
-            </p>
-            <p>영향을 더욱 줄이기 위해 예비 부품을 제공하며 헤드셋 이어패드, 리모컨, 비디오 바의 후면 커버 등 교체 가능한 부품을 제작합니다.</p>
-            <a href="#">more</a>
+        <img src="./images/aluminium.png" alt="알루미늄 이미지">
+      </article>
+  
+      <article class="all-in-one-container">
+        <div class="all-in-one-wrapper">
+          <h2>줄어든 부품을 올인원에</h2>
+          <div class="all-in-one-content">
+            <h3>04</h3>
+            <div class="all-in-one-box">
+              <p>로지텍의 화상 회의실 솔루션은 외부 컴퓨팅 또는 추가 스피커 및 마이크가 필요한 회의실 시스템과 비교할 때, 특히 올인원 비디오 바를 비롯하여 더 적은 장치와 전력을 소모할 수 있습니다.
+              </p>
+              <p>영향을 더욱 줄이기 위해 예비 부품을 제공하며 헤드셋 이어패드, 리모컨, 비디오 바의 후면 커버 등 교체 가능한 부품을 제작합니다.</p>
+              <a href="#">more</a>
+            </div>
           </div>
         </div>
-      </div>
-      <img src="./images/all-in-one.png" alt="올인원 제품 이미지">
-    </section>
-
-    <section class="carbon-container">
-      <div class="carbon-wrapper">
-        <h2>탄소 라벨링</h2>
-        <div class="carbon-content">
-          <h3>05</h3>
-          <div class="carbon-box">
-            <p>로지텍은 탄소 라벨링을 통해 모든 구매 결정이 미치는 영향을 더욱 명확하게 알리고자 합니다. 로지텍은 제품에 탄소 영향 라벨을 부착한 최초의 화상 회의 하드웨어 및 소비자 전자기기
-              회사입니다.
-              2025년까지 전체 포트폴리오에 이를 수행할 것을 약속합니다.</p>
-            <a href="#">more</a>
+        <img src="./images/all-in-one.png" alt="올인원 제품 이미지">
+      </article>
+  
+      <article class="carbon-container">
+        <div class="carbon-wrapper">
+          <h2>탄소 라벨링</h2>
+          <div class="carbon-content">
+            <h3>05</h3>
+            <div class="carbon-box">
+              <p>로지텍은 탄소 라벨링을 통해 모든 구매 결정이 미치는 영향을 더욱 명확하게 알리고자 합니다. 로지텍은 제품에 탄소 영향 라벨을 부착한 최초의 화상 회의 하드웨어 및 소비자 전자기기
+                회사입니다.
+                2025년까지 전체 포트폴리오에 이를 수행할 것을 약속합니다.</p>
+              <a href="#">more</a>
+            </div>
           </div>
         </div>
-      </div>
-      <img src="./images/carbon.jpg" alt="탄소 라벨링 이미지">
+        <img src="./images/carbon.jpg" alt="탄소 라벨링 이미지">
+      </article>
     </section>
 
     <section class="partner-container">

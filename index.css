@@ -77,19 +77,28 @@ main .logitech-container .slide-box {
 main .logitech-container .logitech-text-box {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 45px 0 21px;
+}
+
+main .logitech-container .logitech-text-box svg {
+  width: 40px;
+}
+
+main .logitech-container .logitech-text-box svg line {
+  stroke-width: 40;
 }
 
 main .logitech-container .logitech-text-box p {
   font-size: var(--mobile-font-md);
-  font-weight: 400;
+  font-weight: 600;
 }
 
-main .logitech-container .slide-box li {
+main .logitech-container .slide-wrapper .slide-box .slide-img {
   width: 340px;
 }
 
-main .logitech-container .slide-box li img {
+main .logitech-container .slide-wrapper .slide-box .slide-img img {
   width: 100%;
   border-radius: 15px;
 }
@@ -161,36 +170,34 @@ main .about-container .about-wrapper .about-menu li {
 }
 
 /* li를 클릭하면 on 클래스가 붙음 */
-main .about-container .about-wrapper .about-menu li.on {
+main .about-container .about-wrapper .about-menu li.active {
   color: var(--900-black);
   font-weight: 400;
 }
 
-main .about-container .about-wrapper .about-content {
-  width: 80%;
+main .about-container .about-wrapper .about-logitech-box {
   min-width: calc(100% - 93px);
   position: relative;
   border-left: 1px solid var(--700-gray);
 }
 
-main .about-container .about-wrapper .about-content li {
+main .about-container .about-wrapper .about-logitech-box li {
   height: 100%;
-
   display: none;
 }
 
-main .about-container .about-wrapper .about-content li.on {
+main .about-container .about-wrapper .about-logitech-box li.active {
   display: block;
 }
 
-main .about-container .about-wrapper .about-content li h2 {
+main .about-container .about-wrapper .about-logitech-box li h2 {
   font-size: var(--mobile-font-xl);
   font-weight: 600;
   color: var(--800-black);
   padding: 40px 12px 0;
 }
 
-main .about-container .about-wrapper .about-content li p {
+main .about-container .about-wrapper .about-logitech-box li p {
   font-size: var(--mobile-font-md);
   font-weight: 400;
   color: var(--700-black);
@@ -198,7 +205,7 @@ main .about-container .about-wrapper .about-content li p {
   padding: 18px 12px 0;
 }
 
-main .about-container .about-wrapper .about-content li img {
+main .about-container .about-wrapper .about-logitech-box li img {
   height: 50%;
   width: 100%;
   object-fit: cover;
@@ -220,6 +227,7 @@ main .sustainability-container h2 {
   font-weight: 400;
   color: var(--800-black);
   padding-top: 60px;
+  text-align: center;
 }
 
 main .sustainability-container p {
@@ -228,6 +236,7 @@ main .sustainability-container p {
   color: var(--700-black);
   padding-top: 20px;
   line-height: 1.4;
+  text-align: center;
 }
 
 main .sustainability-container .sustainability-box {
@@ -254,23 +263,23 @@ main .sustainability-container .sustainability-box li h3 {
   padding-top: 18px;
 }
 
-/*** plastic-container, fabric-container, aluminium-container, all-in-one-container, carbon-container ***/
-main .plastic-container,
-main .fabric-container,
-main .aluminium-container,
-main .all-in-one-container,
-main .carbon-container {
+/* plastic-container, fabric-container, aluminium-container, all-in-one-container, carbon-container */
+main .sustainablity-desc .plastic-container,
+main .sustainablity-desc .fabric-container,
+main .sustainablity-desc .aluminium-container,
+main .sustainablity-desc .all-in-one-container,
+main .sustainablity-desc .carbon-container {
   background-color: var(--bg-white-color);
   border-radius: 20px;
   height: 970px;
   position: relative;
 }
 
-main .plastic-container .plastic-wrapper h2,
-main .fabric-container .fabric-wrapper h2,
-main .aluminium-container .aluminium-wrapper h2,
-main .all-in-one-container .all-in-one-wrapper h2,
-main .carbon-container .carbon-wrapper h2 {
+main .sustainablity-desc .plastic-container .plastic-wrapper h2,
+main .sustainablity-desc .fabric-container .fabric-wrapper h2,
+main .sustainablity-desc .aluminium-container .aluminium-wrapper h2,
+main .sustainablity-desc .all-in-one-container .all-in-one-wrapper h2,
+main .sustainablity-desc .carbon-container .carbon-wrapper h2 {
   font-family: var(--sub-font);
   font-size: var(--mobile-font-xxl);
   font-weight: 500;
@@ -278,40 +287,40 @@ main .carbon-container .carbon-wrapper h2 {
   padding: 35px 24px 0 24px;
 }
 
-main .plastic-container .plastic-wrapper .plastic-content,
-main .fabric-container .fabric-wrapper .fabric-content,
-main .aluminium-container .aluminium-wrapper .aluminium-content,
-main .all-in-one-container .all-in-one-wrapper .all-in-one-content,
-main .carbon-container .carbon-wrapper .carbon-content {
+main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content,
+main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content,
+main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content,
+main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content,
+main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content {
   display: flex;
   gap: 87px;
   padding: 50px 24px 0 24px;
 }
 
-main .plastic-container .plastic-wrapper .plastic-content h3,
-main .fabric-container .fabric-wrapper .fabric-content h3,
-main .aluminium-container .aluminium-wrapper .aluminium-content h3,
-main .all-in-one-container .all-in-one-wrapper .all-in-one-content h3,
-main .carbon-container .carbon-wrapper .carbon-content h3 {
+main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content h3,
+main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content h3,
+main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content h3,
+main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content h3,
+main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content h3 {
   font-size: var(--mobile-font-xxl);
   font-weight: 800;
   color: var(--600-black);
 }
 
-main .plastic-container .plastic-wrapper .plastic-content .plastic-box,
-main .fabric-container .fabric-wrapper .fabric-box,
-main .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box,
-main .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box,
-main .carbon-container .carbon-wrapper .carbon-content .carbon-box {
+main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content .plastic-box,
+main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-box,
+main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box,
+main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box,
+main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content .carbon-box {
   display: block;
   position: relative;
 }
 
-main .plastic-container .plastic-wrapper .plastic-content .plastic-box p,
-main .fabric-container .fabric-wrapper .fabric-content .fabric-box p,
-main .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box p,
-main .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box p,
-main .carbon-container .carbon-wrapper .carbon-content .carbon-box p {
+main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content .plastic-box p,
+main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content .fabric-box p,
+main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box p,
+main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box p,
+main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content .carbon-box p {
   font-size: var(--mobile-font-md);
   font-weight: 400;
   color: var(--900-black);
@@ -319,11 +328,11 @@ main .carbon-container .carbon-wrapper .carbon-content .carbon-box p {
   padding-bottom: 25px;
 }
 
-main .plastic-container .plastic-wrapper .plastic-content .plastic-box a,
-main .fabric-container .fabric-wrapper .fabric-content .fabric-box a,
-main .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box a,
-main .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box a,
-main .carbon-container .carbon-wrapper .carbon-content .carbon-box a {
+main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content .plastic-box a,
+main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content .fabric-box a,
+main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box a,
+main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box a,
+main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content .carbon-box a {
   font-size: var(--mobile-font-md);
   font-weight: 400;
   color: var(--bg-white-color);
@@ -335,21 +344,21 @@ main .carbon-container .carbon-wrapper .carbon-content .carbon-box a {
   right: 0;
 }
 
-main .plastic-container .plastic-wrapper .plastic-content .plastic-box a:hover,
-main .fabric-container .fabric-wrapper .fabric-content .fabric-box a:hover,
-main .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box a:hover,
-main .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box a:hover,
-main .carbon-container .carbon-wrapper .carbon-content .carbon-box a:hover {
+main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content .plastic-box a:hover,
+main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content .fabric-box a:hover,
+main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content .aluminium-box a:hover,
+main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content .all-in-one-box a:hover,
+main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content .carbon-box a:hover {
   background-color: var(--bg-white-color);
   border: 1px solid var(--600-black);
   color: var(--600-black);
 }
 
-main .plastic-container img,
-main .fabric-container img,
-main .aluminium-container img,
-main .all-in-one-container img,
-main .carbon-container img {
+main .sustainablity-desc .plastic-container img,
+main .sustainablity-desc .fabric-container img,
+main .sustainablity-desc .aluminium-container img,
+main .sustainablity-desc .all-in-one-container img,
+main .sustainablity-desc .carbon-container img {
   width: 100%;
   height: 540px;
   object-fit: cover;
@@ -358,7 +367,7 @@ main .carbon-container img {
   border-radius: 0 0 20px 20px;
 }
 
-main .all-in-one-container .all-in-one-wrapper .all-in-one-wrapper .all-in-one-box p:first-child {
+main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-wrapper .all-in-one-box p:first-child {
   padding-bottom: 15px;
 }
 
@@ -433,7 +442,7 @@ main .partner-container .partner-wrapper .zoom-content p {
 /***** footer *****/
 footer {
   background-color: var(--bg-darkgray-color);
-  padding: 50px 48px;
+  padding: 50px 24px;
   border-radius: 20px;
   margin-bottom: 30px;
 }
@@ -444,6 +453,7 @@ footer .sub-gnb {
   grid-template-rows: 1fr 1fr;
   padding-bottom: 50px;
   border-bottom: 2px solid #777;
+  padding: 0 24px 50px 24px;
 }
 
 footer .sub-gnb .info-gnb {
@@ -492,6 +502,18 @@ footer .sub-gnb .customer-gnb li {
   font-size: var(--mobile-font-md);
   font-weight: 400;
   padding-bottom: 20px;
+}
+
+footer .sub-gnb .info-gnb li:hover,
+footer .sub-gnb .value-gnb li:hover,
+footer .sub-gnb .customer-gnb li:hover {
+  text-decoration: underline;
+}
+
+footer .sub-gnb .info-gnb li:first-child:hover,
+footer .sub-gnb .value-gnb li:first-child:hover,
+footer .sub-gnb .customer-gnb li:first-child:hover {
+  text-decoration: none;
 }
 
 footer .news-container {
@@ -561,19 +583,19 @@ footer .news-container .email-check p a:hover {
   text-decoration: none;
 }
 
-footer .clause {
+footer .news-container .clause {
   padding-top: 40px;
   text-align: center;
   color: var(--700-gray);
   font-size: var(--mobile-font-sm);
 }
 
-footer .clause a:hover {
+footer .news-container .clause a:hover {
   text-decoration: underline;
 }
 
 footer .footer-text {
-  padding: 30px 24px 70px;
+  padding: 30px 20px 70px;
   position: relative;
 }
 
@@ -608,7 +630,7 @@ footer .footer-text address {
 footer .footer-text .github {
   position: absolute;
   bottom: -25px;
-  right: -24px;
+  right: 0;
   font-size: var(--mobile-font-md);
   font-weight: 400;
   color: var(--bg-white-color);

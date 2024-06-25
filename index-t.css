@@ -1,0 +1,73 @@
+@charset "utf-8";
+@media screen and (min-width: 769px) {
+  /***** main *****/
+  /*** logitech-container ***/
+  main .logitech-container .logitech-text-box svg {
+    width: 120px;
+  }
+  
+  main .logitech-container .logitech-text-box svg line {
+    stroke-width: 40;
+  }
+
+  /*** about-container ***/
+  main .about-container .about-wrapper .about-menu {
+    width: 20%;
+    max-width: 250px;
+    padding-left: 15px;
+  }
+
+  main .about-container .about-wrapper .about-logitech-box {
+    /* width: 80%; */
+    min-width: calc(100% - 250px);
+  }
+
+  /*** sustainability-container ***/
+  main .sustainability-container h2 {
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  main .sustainability-container p {
+    text-align: center;
+    padding-top: 15px;
+  }
+
+  main .sustainability-container .sustainability-box {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /***** footer *****/
+  footer .sub-gnb {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    width: 600px;
+    border: none;
+  }
+
+  footer .sub-gnb .info-gnb {
+    justify-self: flex-start;
+  }
+  
+  footer .sub-gnb .info-gnb li,
+  footer .sub-gnb .value-gnb li {
+    padding-top: 22px;
+  }
+  
+  footer .sub-gnb .value-gnb {
+    justify-self: flex-start;
+  }
+  
+  footer .sub-gnb .customer-gnb {
+    justify-self: flex-start;
+    align-self: flex-start;
+  }
+
+  footer .news-container {
+    border-top: 2px solid #777;
+  }
+}
