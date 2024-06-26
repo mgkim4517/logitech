@@ -347,13 +347,6 @@ main .sustainablity-desc .carbon-container {
   position: relative;
 }
 
-main .sustainablity-desc .plastic-container .plastic-wrapper,
-main .sustainablity-desc .fabric-container .fabric-wrapper,
-main .sustainablity-desc .aluminium-container .aluminium-wrapper,
-main .sustainablity-desc .all-in-one-container .all-in-one-wrapper,
-main .sustainablity-desc .carbon-container .carbon-wrapper {
-}
-
 main .sustainablity-desc .plastic-container .plastic-wrapper h2,
 main .sustainablity-desc .fabric-container .fabric-wrapper h2,
 main .sustainablity-desc .aluminium-container .aluminium-wrapper h2,
@@ -634,6 +627,7 @@ footer .news-container .email-box label input {
   width: 100%;
   height: 40px;
   border: none;
+  border-radius: 0;
 }
 
 footer .news-container .email-box button {
