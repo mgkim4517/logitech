@@ -24,7 +24,7 @@
   /*** logitech-container ***/
   main .logitech-container {
     padding: 35px 0;
-    height: calc(100vh - 45px);
+    height: calc(950px - 45px);
   }
 
   main .logitech-container h2 {
@@ -86,12 +86,10 @@
   }
 
   main .about-container .about-wrapper {
-    height: 650px;
+    grid-template-columns: 23% 77%;
   }
 
   main .about-container .about-wrapper .about-menu {
-    width: 30%;
-    max-width: 250px;
     padding-left: 20px;
   }
 
@@ -100,18 +98,19 @@
   }
 
   main .about-container .about-wrapper .about-logitech-box {
-    width: 70%;
     min-width: calc(100% - 250px);
   }
 
   main .about-container .about-wrapper .about-logitech-box li h2 {
     font-size: var(--web-font-lg);
-    padding: 70px 0 50px 20px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: 30px;
   }
 
   main .about-container .about-wrapper .about-logitech-box li p {
     font-size: var(--web-font-xs);
-    padding: 0 20px 32px 20px;
+    padding: 0 30px 32px 30px;
   }
 
   /*** sustainability-container ***/

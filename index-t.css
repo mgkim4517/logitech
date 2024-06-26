@@ -12,7 +12,6 @@
 
   /*** about-container ***/
   main .about-container .about-wrapper .about-menu {
-    width: 20%;
     max-width: 250px;
     padding-left: 15px;
   }

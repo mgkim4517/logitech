@@ -164,7 +164,7 @@ main .about-container h2 {
 }
 
 main .about-container p {
-  font-size: var(--mobile-font-lg);
+  font-size: var(--mobile-font-md);
   color: var(--800-black);
   font-weight: 400;
   line-height: 1.4;
@@ -189,51 +189,41 @@ main .about-container a:hover {
 }
 
 main .about-container .about-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 290px 360px;
   background-color: var(--bg-white-color);
   border-radius: 20px;
   margin-top: 88px;
-  width: 100%;
   height: 650px;
 }
 
 main .about-container .about-wrapper .about-menu {
-  min-width: 93px;
-  width: 20%;
-  align-self: flex-end;
-  padding-bottom: 20px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  place-content: end;
   padding-left: 10px;
+  padding-bottom: 30px;
 }
 
 main .about-container .about-wrapper .about-menu li {
   font-size: var(--mobile-font-sm);
   font-weight: 300;
   color: var(--800-gray);
-  margin-top: 15px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
-/* li를 클릭하면 active 클래스가 붙음 */
 main .about-container .about-wrapper .about-menu li.active {
-  /* color: var(--900-black); */
   color: #4682B4;
   font-weight: 600;
 }
 
 main .about-container .about-wrapper .about-logitech-box {
-  min-width: calc(100% - 93px);
-  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  width: 100%;
   border-left: 1px solid var(--700-gray);
-}
-
-main .about-container .about-wrapper .about-logitech-box li {
-  height: 100%;
-  display: none;
-}
-
-/* 클릭한 li와 같은 인덱스 번호의 li에 active 클래스 붙음 */
-main .about-container .about-wrapper .about-logitech-box li.active {
-  display: block;
 }
 
 main .about-container .about-wrapper .about-logitech-box li h2 {
@@ -244,20 +234,42 @@ main .about-container .about-wrapper .about-logitech-box li h2 {
 }
 
 main .about-container .about-wrapper .about-logitech-box li p {
-  font-size: var(--mobile-font-md);
+  font-size: var(--mobile-font-sm);
   font-weight: 400;
   color: var(--700-black);
   line-height: 1.5;
   padding: 18px 12px 0;
 }
 
-main .about-container .about-wrapper .about-logitech-box li img {
-  height: 40%;
+main .about-container .about-wrapper .about-logitech-box .about-content {
+  display: none;
+}
+
+main .about-container .about-wrapper .about-logitech-box .about-content.active {
+  display: block
+}
+
+main .about-container .about-wrapper .about-img {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+  height: 360px;
+}
+
+main .about-container .about-wrapper .about-img li img {
   width: 100%;
+  height: 360px;
   object-fit: cover;
-  position: absolute;
-  bottom: 0;
-  border-radius: 0 0 20px 0;
+  object-position: center center;
+}
+
+main .about-container .about-wrapper .about-img li {
+  display: none;
+}
+
+main .about-container .about-wrapper .about-img li.active {
+  display: block;
 }
 
 /*** sustainability-container ***/
@@ -277,7 +289,7 @@ main .sustainability-container h2 {
 }
 
 main .sustainability-container p {
-  font-size: var(--mobile-font-lg);
+  font-size: var(--mobile-font-md);
   font-weight: 400;
   color: var(--700-black);
   padding-top: 20px;

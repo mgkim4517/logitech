@@ -42,6 +42,7 @@ article > container > wrapper > content > box
 
 ## 240626
 * index.css 수정
+* about-container about-wrapper 부분 구조 및 디자인 변경
 
 ## 240625
 * index-pc.css 완성
