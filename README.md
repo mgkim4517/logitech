@@ -1,9 +1,52 @@
+## Design Guide
+```
+1. KEYWORD
+#깔끔한 #심플한 #현대적인
+
+2. COLOR
+--bg-body-color: #D2D2D2;
+--bg-gray-color: #EBEBEB;
+--bg-darkgray-color: #464646;
+--bg-white-color: #fff;
+
+--900-black: #000;
+--800-black: #222;
+--700-black: #272727;
+--600-black: #333;
+
+--900-gray: #666;
+--800-gray: #808080;
+--700-gray: #EBEBEB;
+블랙 계열과 회색 계열 컬러를 사용하여 고급스럽고 현대적인 느낌을 살렸으며, 포인트 컬러로 로지텍 로고 색상인 #4682B4을 사용하여 브랜드 아이덴티티를 살렸습니다.
+
+3. FONT
+- 메인 폰트 : 프리텐다드
+- 서브 폰트 : 에스코어드림
+```
+
+## Publishing Guide
+```
+1. 통일된 식별자명을 위해 케밥 표기법 사용
+ex) logitech-container
+
+2. 주석
+/***** header, main, footer *****/, <!-- ***** header, main, footer ***** -->
+/*** section ***/, <!-- *** section *** -->
+/* 그 외 */, <!-- * 그 외 * -->
+
+3. class명 표기법
+article > container > wrapper > content > box
+```
+
+## 240626
+* index.css 수정
+
 ## 240625
 * index-pc.css 완성
 * index-t.css 완성
 * index.js 완성
 * logitech-container의 .slide-wrapper의 이미지가 무한으로 흐르도록 하는 애니메이션 효과 구현
-* about-container의 .about-menu의 li를 클릭할 경우 .about-logitech-box의 같은 인덱스 번호의 li에 active 클래스가 붙도록 하는 이벤트 구현
+* about-container의 .about-menu의 li를 클릭할 경우 같은 인덱스 번호의 .about-logitech-box li에 active 클래스가 붙도록 하는 이벤트 구현
 
 ## 240624
 * index.css 완성

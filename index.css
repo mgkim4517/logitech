@@ -213,10 +213,11 @@ main .about-container .about-wrapper .about-menu li {
   cursor: pointer;
 }
 
-/* li를 클릭하면 on 클래스가 붙음 */
+/* li를 클릭하면 active 클래스가 붙음 */
 main .about-container .about-wrapper .about-menu li.active {
-  color: var(--900-black);
-  font-weight: 400;
+  /* color: var(--900-black); */
+  color: #4682B4;
+  font-weight: 600;
 }
 
 main .about-container .about-wrapper .about-logitech-box {
@@ -230,6 +231,7 @@ main .about-container .about-wrapper .about-logitech-box li {
   display: none;
 }
 
+/* 클릭한 li와 같은 인덱스 번호의 li에 active 클래스 붙음 */
 main .about-container .about-wrapper .about-logitech-box li.active {
   display: block;
 }
@@ -250,7 +252,7 @@ main .about-container .about-wrapper .about-logitech-box li p {
 }
 
 main .about-container .about-wrapper .about-logitech-box li img {
-  height: 50%;
+  height: 40%;
   width: 100%;
   object-fit: cover;
   position: absolute;
@@ -307,7 +309,20 @@ main .sustainability-container .sustainability-box li h3 {
   padding-top: 18px;
 }
 
-/*** sustainablity-des ***/
+/*** sustainablity-desc ***/
+main .sustainablity-desc {
+  height: 4850px;
+}
+
+main .sustainablity-desc .plastic-article,
+main .sustainablity-desc .fabric-article,
+main .sustainablity-desc .aluminium-article,
+main .sustainablity-desc .all-in-one-article,
+main .sustainablity-desc .carbon-article {
+  position: sticky;
+  top: 0;
+}
+
 /* plastic-container, fabric-container, aluminium-container, all-in-one-container, carbon-container */
 main .sustainablity-desc .plastic-container,
 main .sustainablity-desc .fabric-container,
@@ -318,6 +333,13 @@ main .sustainablity-desc .carbon-container {
   border-radius: 20px;
   height: 970px;
   position: relative;
+}
+
+main .sustainablity-desc .plastic-container .plastic-wrapper,
+main .sustainablity-desc .fabric-container .fabric-wrapper,
+main .sustainablity-desc .aluminium-container .aluminium-wrapper,
+main .sustainablity-desc .all-in-one-container .all-in-one-wrapper,
+main .sustainablity-desc .carbon-container .carbon-wrapper {
 }
 
 main .sustainablity-desc .plastic-container .plastic-wrapper h2,
@@ -338,7 +360,7 @@ main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-cont
 main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content,
 main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content {
   display: flex;
-  gap: 87px;
+  gap: 70px;
   padding: 50px 24px 0 24px;
 }
 
@@ -347,9 +369,9 @@ main .sustainablity-desc .fabric-container .fabric-wrapper .fabric-content h3,
 main .sustainablity-desc .aluminium-container .aluminium-wrapper .aluminium-content h3,
 main .sustainablity-desc .all-in-one-container .all-in-one-wrapper .all-in-one-content h3,
 main .sustainablity-desc .carbon-container .carbon-wrapper .carbon-content h3 {
-  font-size: var(--mobile-font-xxl);
+  font-size: 36px;
   font-weight: 800;
-  color: var(--600-black);
+  color: #4682B4;
 }
 
 main .sustainablity-desc .plastic-container .plastic-wrapper .plastic-content .plastic-box,
@@ -593,17 +615,26 @@ footer .news-container .email-box {
 }
 
 footer .news-container .email-box label {
-  width: 100%
+  width: 100%;
 }
 
 footer .news-container .email-box label input {
   width: 100%;
   height: 40px;
+  border: none;
 }
 
 footer .news-container .email-box button {
   width: 40px;
   height: 40px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  background-color: var(--700-gray);
+}
+
+footer .news-container .email-box button:hover {
+  opacity: 0.8;
 }
 
 footer .news-container .email-check {
@@ -614,15 +645,15 @@ footer .news-container .email-check {
 }
 
 footer .news-container .email-check p {
-  font-size: var(--mobile-font-sm);
-  font-weight: 400;
+  font-size: var(--mobile-font-xs);
+  font-weight: 300;
   color: var(--700-gray);
   margin-left: 12px;
   line-height: 1.3;
 }
 
 footer .news-container .email-check p a {
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: underline;
 }
 
@@ -635,6 +666,8 @@ footer .news-container .clause {
   text-align: center;
   color: var(--700-gray);
   font-size: var(--mobile-font-sm);
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 footer .news-container .clause a:hover {
@@ -653,12 +686,12 @@ footer .footer-text h2 img {
 
 footer .footer-text p {
   font-size: var(--mobile-font-xs);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--700-gray);
 }
 
 footer .footer-text p a {
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: underline;
 }
 
@@ -669,9 +702,10 @@ footer .footer-text p a:hover {
 footer .footer-text address {
   padding: 15px 0;
   font-size: var(--mobile-font-xs);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--700-gray);
   font-style: normal;
+  line-height: 1.2;
 }
 
 footer .footer-text .github {
@@ -679,7 +713,7 @@ footer .footer-text .github {
   bottom: -25px;
   right: 0;
   font-size: var(--mobile-font-md);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--bg-white-color);
 }
 
