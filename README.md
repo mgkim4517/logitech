@@ -4,22 +4,10 @@
 #깔끔한 #심플한 #현대적인
 
 2. COLOR
---bg-body-color: #D2D2D2;
---bg-gray-color: #EBEBEB;
---bg-darkgray-color: #464646;
---bg-white-color: #fff;
-
---900-black: #000;
---800-black: #222;
---700-black: #272727;
---600-black: #333;
-
---900-gray: #666;
---800-gray: #808080;
---700-gray: #EBEBEB;
+#BLACK #GRAY #WHITE #4682B4
 
 무채색 컬러를 사용하여 고급스럽고 현대적인 느낌을 살렸습니다.
-로지텍 브랜드 로고 컬러인 #4682B4을 포인트 컬러로 사용했습니다.
+로고 컬러를 포인트 컬러로 사용하여 브랜드 아이덴티티를 살리고 단조로움을 방지하였습니다.
 
 3. FONT
 - 메인 폰트 : 프리텐다드
@@ -43,6 +31,8 @@ article > container > wrapper > content > box
 ## 240626
 * index.css 수정
 * about-container about-wrapper 부분 구조 및 디자인 변경
+* favicon 작업
+* open graph 작업
 
 ## 240625
 * index-pc.css 완성
