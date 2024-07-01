@@ -44,6 +44,8 @@ article > container > wrapper > content > box
 ## 240624
 * index.css 완성
 * index-pc.css 작업
+* svg의 width값을 줄이면 선이 얇고 연해지는 문제 발생 -> svg line의 stroke-width 코드로 선의 두께를 조절해 해결
+* about-wrapper이 이미지가 그리드를 가득 채우지 않고 여백이 생기는 문제 발생 -> 모바일과 PC 버전의 이미지 세로 값이 동일하기 때문에 height에 고정값을 줘서 해결
 
 ## 240623
 * mobile 디자인 완성
